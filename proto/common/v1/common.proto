@@ -1,0 +1,7 @@
+Contiene messaggi condivisi tra i servizi.
+
+Responsabilità:
+- evitare duplicazioni di tipi comuni
+- mantenere contratti stabili e riutilizzabili
+
+Non deve contenere logica di dominio specifica.

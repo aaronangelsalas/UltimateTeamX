@@ -1,0 +1,3 @@
+package internal
+
+//internal implementazione

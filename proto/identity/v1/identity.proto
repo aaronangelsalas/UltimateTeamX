@@ -1,0 +1,8 @@
+Definisce l’API gRPC per autenticazione e identità.
+
+Responsabilità:
+- registrazione utente
+- login
+- emissione JWT
+
+Questo servizio NON deve conoscere club, carte o mercato.

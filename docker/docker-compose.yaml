@@ -1,0 +1,44 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: utx
+      POSTGRES_PASSWORD: utx
+      POSTGRES_DB: utx
+    ports: ["5432:5432"]
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    ports: ["6379:6379"]
+
+  identity:
+    build: ../services/identity
+    environment:
+      DB_DSN: postgres://utx:utx@postgres:5432/utx?sslmode=disable
+      JWT_SECRET: devsecret
+    depends_on: [postgres]
+    ports: ["50051:50051"]
+
+  club:
+    build: ../services/club
+    environment:
+      DB_DSN: postgres://utx:utx@postgres:5432/utx?sslmode=disable
+      REDIS_ADDR: redis:6379
+      JWT_PUBLIC: devsecret
+    depends_on: [postgres, redis]
+    ports: ["50052:50052"]
+
+  market:
+    build: ../services/market
+    environment:
+      DB_DSN: postgres://utx:utx@postgres:5432/utx?sslmode=disable
+      REDIS_ADDR: redis:6379
+      CLUB_GRPC_ADDR: club:50052
+      JWT_PUBLIC: devsecret
+    depends_on: [postgres, redis, club]
+    ports: ["50053:50053"]
+
+volumes:
+  pgdata:

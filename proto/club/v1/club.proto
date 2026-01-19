@@ -1,0 +1,11 @@
+Contratto gRPC del servizio club (owner-of-truth).
+
+Responsabilità:
+- stato del club
+- crediti
+- inventario carte
+- lock carte per il mercato
+- hold crediti per aste
+- settlement finale di una trade
+
+Ogni modifica economica passa da qui.

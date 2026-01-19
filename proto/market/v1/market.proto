@@ -1,0 +1,9 @@
+Contratto gRPC del servizio mercato.
+
+Responsabilità:
+- creazione listing
+- gestione bid
+- buy-now
+- stato delle aste
+
+Questo servizio NON modifica direttamente crediti o carte.
