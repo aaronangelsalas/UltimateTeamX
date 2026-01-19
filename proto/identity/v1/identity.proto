@@ -1,8 +1,30 @@
-Definisce l’API gRPC per autenticazione e identità.
+syntax = "proto3";
 
-Responsabilità:
-- registrazione utente
-- login
-- emissione JWT
+package identity.v1;
 
-Questo servizio NON deve conoscere club, carte o mercato.
+option go_package = "UltimateTeamX/proto/identity/v1;identityv1";
+
+service IdentityService {
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+}
+
+message RegisterRequest {
+  string email = 1;
+  string password = 2;
+  string display_name = 3;
+}
+
+message RegisterResponse {
+  string user_id = 1;
+}
+
+message LoginRequest {
+  string email = 1;
+  string password = 2;
+}
+
+message LoginResponse {
+  string access_token = 1;
+  int64 expires_at_unix = 2;
+}

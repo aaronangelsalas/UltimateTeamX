@@ -1,7 +1,26 @@
-Contiene messaggi condivisi tra i servizi.
+syntax = "proto3";
 
-Responsabilità:
-- evitare duplicazioni di tipi comuni
-- mantenere contratti stabili e riutilizzabili
+package common.v1;
 
-Non deve contenere logica di dominio specifica.
+option go_package = "UltimateTeamX/proto/common/v1;commonv1";
+
+message Pagination {
+  uint32 page = 1;
+  uint32 page_size = 2;
+}
+
+message Sort {
+  string field = 1;
+  SortOrder order = 2;
+}
+
+enum SortOrder {
+  SORT_ORDER_UNSPECIFIED = 0;
+  SORT_ORDER_ASC = 1;
+  SORT_ORDER_DESC = 2;
+}
+
+message Error {
+  string code = 1;
+  string message = 2;
+}

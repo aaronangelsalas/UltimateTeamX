@@ -1,11 +1,69 @@
-Contratto gRPC del servizio club (owner-of-truth).
+syntax = "proto3";
 
-Responsabilità:
-- stato del club
-- crediti
-- inventario carte
-- lock carte per il mercato
-- hold crediti per aste
-- settlement finale di una trade
+package club.v1;
 
-Ogni modifica economica passa da qui.
+option go_package = "UltimateTeamX/proto/club/v1;clubv1";
+
+service ClubService {
+  rpc GetClub(GetClubRequest) returns (GetClubResponse);
+  rpc LockCard(LockCardRequest) returns (LockCardResponse);
+  rpc ReleaseCardLock(ReleaseCardLockRequest) returns (ReleaseCardLockResponse);
+  rpc CreateCreditHold(CreateCreditHoldRequest) returns (CreateCreditHoldResponse);
+  rpc ReleaseCreditHold(ReleaseCreditHoldRequest) returns (ReleaseCreditHoldResponse);
+  rpc SettleTrade(SettleTradeRequest) returns (SettleTradeResponse);
+}
+
+message GetClubRequest {
+  string user_id = 1;
+}
+
+message GetClubResponse {
+  int64 credits = 1;
+}
+
+message LockCardRequest {
+  string user_id = 1;
+  string user_card_id = 2;
+  string reason = 3;
+}
+
+message LockCardResponse {
+  string lock_id = 1;
+}
+
+message ReleaseCardLockRequest {
+  string lock_id = 1;
+}
+
+message ReleaseCardLockResponse {
+  bool released = 1;
+}
+
+message CreateCreditHoldRequest {
+  string user_id = 1;
+  int64 amount = 2;
+  string reason = 3;
+}
+
+message CreateCreditHoldResponse {
+  string hold_id = 1;
+}
+
+message ReleaseCreditHoldRequest {
+  string hold_id = 1;
+}
+
+message ReleaseCreditHoldResponse {
+  bool released = 1;
+}
+
+message SettleTradeRequest {
+  string seller_user_id = 1;
+  string buyer_user_id = 2;
+  string user_card_id = 3;
+  int64 amount = 4;
+}
+
+message SettleTradeResponse {
+  bool settled = 1;
+}

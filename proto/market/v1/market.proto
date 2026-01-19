@@ -1,9 +1,68 @@
-Contratto gRPC del servizio mercato.
+syntax = "proto3";
 
-Responsabilità:
-- creazione listing
-- gestione bid
-- buy-now
-- stato delle aste
+package market.v1;
 
-Questo servizio NON modifica direttamente crediti o carte.
+option go_package = "UltimateTeamX/proto/market/v1;marketv1";
+
+service MarketService {
+  rpc CreateListing(CreateListingRequest) returns (CreateListingResponse);
+  rpc PlaceBid(PlaceBidRequest) returns (PlaceBidResponse);
+  rpc BuyNow(BuyNowRequest) returns (BuyNowResponse);
+  rpc GetListing(GetListingRequest) returns (GetListingResponse);
+}
+
+message CreateListingRequest {
+  string seller_user_id = 1;
+  string user_card_id = 2;
+  int64 start_price = 3;
+  int64 buy_now_price = 4;
+  int64 expires_at_unix = 5;
+}
+
+message CreateListingResponse {
+  string listing_id = 1;
+}
+
+message PlaceBidRequest {
+  string listing_id = 1;
+  string bidder_user_id = 2;
+  int64 bid_amount = 3;
+}
+
+message PlaceBidResponse {
+  int64 best_bid = 1;
+  string best_bidder_user_id = 2;
+}
+
+message BuyNowRequest {
+  string listing_id = 1;
+  string buyer_user_id = 2;
+}
+
+message BuyNowResponse {
+  bool purchased = 1;
+}
+
+message GetListingRequest {
+  string listing_id = 1;
+}
+
+message GetListingResponse {
+  string listing_id = 1;
+  string seller_user_id = 2;
+  string user_card_id = 3;
+  int64 start_price = 4;
+  int64 buy_now_price = 5;
+  int64 best_bid = 6;
+  string best_bidder_user_id = 7;
+  int64 expires_at_unix = 8;
+  ListingStatus status = 9;
+}
+
+enum ListingStatus {
+  LISTING_STATUS_UNSPECIFIED = 0;
+  LISTING_STATUS_ACTIVE = 1;
+  LISTING_STATUS_EXPIRED = 2;
+  LISTING_STATUS_SOLD = 3;
+  LISTING_STATUS_CANCELLED = 4;
+}
