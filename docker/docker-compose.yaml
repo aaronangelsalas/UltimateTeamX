@@ -14,7 +14,7 @@ services:
     ports: ["6379:6379"]
 
   identity:
-    build: ../services/identity
+    build: ../service/identity
     environment:
       DB_DSN: postgres://utx:utx@postgres:5432/utx?sslmode=disable
       JWT_SECRET: devsecret
@@ -22,7 +22,7 @@ services:
     ports: ["50051:50051"]
 
   club:
-    build: ../services/club
+    build: ../service/club
     environment:
       DB_DSN: postgres://utx:utx@postgres:5432/utx?sslmode=disable
       REDIS_ADDR: redis:6379
@@ -31,7 +31,7 @@ services:
     ports: ["50052:50052"]
 
   market:
-    build: ../services/market
+    build: ../service/market
     environment:
       DB_DSN: postgres://utx:utx@postgres:5432/utx?sslmode=disable
       REDIS_ADDR: redis:6379

@@ -1,10 +1,19 @@
-Questo Makefile standardizza i comandi di sviluppo.
+PROTO_DIR := proto
+DOCKER_COMPOSE := docker/docker-compose.yaml
 
-Responsabilità:
-- generazione codice gRPC dai file proto
-- avvio stack Docker Compose
-- esecuzione test
-- cleanup ambiente
+.PHONY: proto up down test tidy
 
-Tutti i developer devono usare questi target per evitare
-differenze di ambiente.
+proto:
+	buf generate
+
+up:
+	docker compose -f $(DOCKER_COMPOSE) up -d
+
+down:
+	docker compose -f $(DOCKER_COMPOSE) down
+
+test:
+	go test ./...
+
+tidy:
+	go mod tidy
