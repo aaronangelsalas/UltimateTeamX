@@ -10,6 +10,8 @@ type Config struct {
 	GRPCAddr      string
 	DBDSN         string
 	ClubGRPCAddr  string
+	RedisAddr     string
+	RedisPassword string
 }
 
 // Load legge le variabili d'ambiente con default minimi.
@@ -20,9 +22,11 @@ func Load() Config {
 	}
 
 	return Config{
-		GRPCAddr:     getEnv("GRPC_ADDR", ":50053"),
-		DBDSN:        dbDSN,
-		ClubGRPCAddr: os.Getenv("CLUB_GRPC_ADDR"),
+		GRPCAddr:      getEnv("GRPC_ADDR", ":50053"),
+		DBDSN:         dbDSN,
+		ClubGRPCAddr:  os.Getenv("CLUB_GRPC_ADDR"),
+		RedisAddr:     getEnv("REDIS_ADDR", "localhost:6379"),
+		RedisPassword: os.Getenv("REDIS_PASSWORD"),
 	}
 }
 

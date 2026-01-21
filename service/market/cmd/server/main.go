@@ -4,13 +4,16 @@ import (
 	"log/slog"
 	"net"
 	"os"
+	"time"
 
-	"github.com/joho/godotenv"
-	"UltimateTeamX/service/market/internal/config"
-	"UltimateTeamX/service/market/internal/db"
-	"UltimateTeamX/service/market/internal/market"
 	clubv1 "UltimateTeamX/proto/club/v1"
 	marketv1 "UltimateTeamX/proto/market/v1"
+	"UltimateTeamX/service/market/internal/config"
+	"UltimateTeamX/service/market/internal/db"
+	"UltimateTeamX/service/market/internal/lock"
+	"UltimateTeamX/service/market/internal/market"
+	"github.com/joho/godotenv"
+	"github.com/redis/go-redis/v9"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/reflection"
@@ -50,11 +53,17 @@ func main() {
 	}
 	defer clubConn.Close()
 
+	redisClient := redis.NewClient(&redis.Options{
+		Addr:     cfg.RedisAddr,
+		Password: cfg.RedisPassword,
+	})
+	redisLock := lock.NewRedisLock(redisClient, 8*time.Second, 3, 100*time.Millisecond)
+
 	// Registra MarketService.
 	server := grpc.NewServer()
 	repo := market.NewRepo(database)
 	clubClient := clubv1.NewClubServiceClient(clubConn)
-	marketv1.RegisterMarketServiceServer(server, market.NewServer(logger, repo, clubClient))
+	marketv1.RegisterMarketServiceServer(server, market.NewServer(logger, repo, clubClient, redisLock))
 	reflection.Register(server)
 
 	// Avvia il listener gRPC.
