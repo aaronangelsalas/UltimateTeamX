@@ -1,8 +1,10 @@
 module UltimateTeamX
 
-go 1.25
+go 1.24.0
 
 require (
+	github.com/google/uuid v1.6.0
+	github.com/lib/pq v1.10.9
 	google.golang.org/grpc v1.78.0
 	google.golang.org/protobuf v1.36.11
 )
