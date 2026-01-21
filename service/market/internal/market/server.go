@@ -20,12 +20,18 @@ const listingStatusActive = "ACTIVE"
 type Server struct {
 	marketv1.UnimplementedMarketServiceServer
 	logger *slog.Logger
-	repo   *Repo
+	repo   ListingRepo
 	club   clubv1.ClubServiceClient
 }
 
+// ListingRepo is the minimal persistence interface used by the server.
+type ListingRepo interface {
+	ActiveListingByCard(ctx context.Context, userCardID string) (string, error)
+	CreateListing(ctx context.Context, listing Listing) error
+}
+
 // NewServer collega logger, repo e client del club-svc.
-func NewServer(logger *slog.Logger, repo *Repo, club clubv1.ClubServiceClient) *Server {
+func NewServer(logger *slog.Logger, repo ListingRepo, club clubv1.ClubServiceClient) *Server {
 	return &Server{logger: logger, repo: repo, club: club}
 }
 
