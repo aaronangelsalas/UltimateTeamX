@@ -6,8 +6,8 @@ import (
 	"net"
 	"os"
 
-	"github.com/google/uuid"
 	clubv1 "UltimateTeamX/proto/club/v1"
+	"github.com/google/uuid"
 	"google.golang.org/grpc"
 )
 
@@ -27,6 +27,19 @@ func (s *mockClubServer) LockCard(_ context.Context, req *clubv1.LockCardRequest
 func (s *mockClubServer) ReleaseCardLock(_ context.Context, req *clubv1.ReleaseCardLockRequest) (*clubv1.ReleaseCardLockResponse, error) {
 	s.logger.Info("mock release card lock", "lock_id", req.LockId)
 	return &clubv1.ReleaseCardLockResponse{Released: true}, nil
+}
+
+// CreateCreditHold simula un hold crediti e ritorna un hold_id fittizio.
+func (s *mockClubServer) CreateCreditHold(_ context.Context, req *clubv1.CreateCreditHoldRequest) (*clubv1.CreateCreditHoldResponse, error) {
+	holdID := uuid.NewString()
+	s.logger.Info("mock credit hold", "user_id", req.UserId, "amount", req.Amount, "hold_id", holdID)
+	return &clubv1.CreateCreditHoldResponse{HoldId: holdID}, nil
+}
+
+// ReleaseCreditHold simula il rilascio di un hold crediti.
+func (s *mockClubServer) ReleaseCreditHold(_ context.Context, req *clubv1.ReleaseCreditHoldRequest) (*clubv1.ReleaseCreditHoldResponse, error) {
+	s.logger.Info("mock release credit hold", "hold_id", req.HoldId)
+	return &clubv1.ReleaseCreditHoldResponse{Released: true}, nil
 }
 
 func main() {
