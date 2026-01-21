@@ -45,7 +45,7 @@ jobs:
           version: "latest"
 
       - name: Buf lint
-        run: buf lint
+        run: buf lint --config proto/buf.yaml
 
       - name: Buf generate
         run: buf generate
