@@ -30,3 +30,6 @@ CreateListing Flow (market-svc)
 
 Osservabilita
 - Log strutturati nel server per errori e successi del flusso CreateListing.
+
+Configurazione
+- Le variabili vengono caricate da `.env` (sovrascrivono quelle gia' presenti) usando `GO_DOTENV_PATH` se valorizzato.

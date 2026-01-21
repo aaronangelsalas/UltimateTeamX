@@ -5,6 +5,7 @@ import (
 	"net"
 	"os"
 
+	"github.com/joho/godotenv"
 	"UltimateTeamX/service/market/internal/config"
 	"UltimateTeamX/service/market/internal/db"
 	"UltimateTeamX/service/market/internal/market"
@@ -18,6 +19,19 @@ import (
 func main() {
 	// Bootstrap di logging e config.
 	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
+
+	// Carica le variabili da .env se presente (solo per dev).
+	envPath := os.Getenv("GO_DOTENV_PATH")
+	if envPath == "" {
+		envPath = ".env"
+	}
+	if err := godotenv.Overload(envPath); err != nil {
+		// Se manca il file .env, continuiamo con le env già presenti.
+		logger.Warn("impossibile caricare .env", "path", envPath, "error", err)
+	} else {
+		logger.Info(".env caricato", "path", envPath)
+	}
+
 	cfg := config.Load()
 
 	// DB richiesto per la persistenza dei listing.

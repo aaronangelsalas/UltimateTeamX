@@ -1,6 +1,9 @@
 package config
 
-import "os"
+import (
+	"fmt"
+	"os"
+)
 
 // Config contiene le impostazioni runtime per market-svc.
 type Config struct {
@@ -11,9 +14,14 @@ type Config struct {
 
 // Load legge le variabili d'ambiente con default minimi.
 func Load() Config {
+	dbDSN := os.Getenv("DB_DSN")
+	if dbDSN == "" {
+		dbDSN = buildDSN()
+	}
+
 	return Config{
 		GRPCAddr:     getEnv("GRPC_ADDR", ":50053"),
-		DBDSN:        os.Getenv("DB_DSN"),
+		DBDSN:        dbDSN,
 		ClubGRPCAddr: os.Getenv("CLUB_GRPC_ADDR"),
 	}
 }
@@ -24,4 +32,17 @@ func getEnv(key, fallback string) string {
 		return value
 	}
 	return fallback
+}
+
+func buildDSN() string {
+	host := os.Getenv("DB_HOST")
+	port := getEnv("DB_PORT", "5432")
+	user := os.Getenv("DB_USER")
+	password := os.Getenv("DB_PASSWORD")
+	name := os.Getenv("DB_NAME")
+	sslmode := getEnv("DB_SSLMODE", "require")
+	if host == "" || user == "" || name == "" {
+		return ""
+	}
+	return fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=%s", user, password, host, port, name, sslmode)
 }
