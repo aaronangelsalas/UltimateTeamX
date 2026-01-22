@@ -5,12 +5,13 @@ import (
 	"net"
 	"os"
 
-	"github.com/joho/godotenv"
+	clubv1 "UltimateTeamX/proto/club/v1"
+	marketv1 "UltimateTeamX/proto/market/v1"
 	"UltimateTeamX/service/market/internal/config"
 	"UltimateTeamX/service/market/internal/db"
 	"UltimateTeamX/service/market/internal/market"
-	clubv1 "UltimateTeamX/proto/club/v1"
-	marketv1 "UltimateTeamX/proto/market/v1"
+
+	"github.com/joho/godotenv"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/reflection"

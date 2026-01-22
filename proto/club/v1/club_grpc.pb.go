@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.6.0
 // - protoc             (unknown)
-// source: proto/club/v1/club.proto
+// source: club/v1/club.proto
 
 package clubv1
 
@@ -307,5 +307,5 @@ var ClubService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "proto/club/v1/club.proto",
+	Metadata: "club/v1/club.proto",
 }

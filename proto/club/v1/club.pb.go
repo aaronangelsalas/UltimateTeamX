@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        (unknown)
-// source: proto/club/v1/club.proto
+// source: club/v1/club.proto
 
 package clubv1
 
@@ -30,7 +30,7 @@ type GetClubRequest struct {
 
 func (x *GetClubRequest) Reset() {
 	*x = GetClubRequest{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[0]
+	mi := &file_club_v1_club_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *GetClubRequest) String() string {
 func (*GetClubRequest) ProtoMessage() {}
 
 func (x *GetClubRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[0]
+	mi := &file_club_v1_club_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *GetClubRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetClubRequest.ProtoReflect.Descriptor instead.
 func (*GetClubRequest) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{0}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *GetClubRequest) GetUserId() string {
@@ -74,7 +74,7 @@ type GetClubResponse struct {
 
 func (x *GetClubResponse) Reset() {
 	*x = GetClubResponse{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[1]
+	mi := &file_club_v1_club_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -86,7 +86,7 @@ func (x *GetClubResponse) String() string {
 func (*GetClubResponse) ProtoMessage() {}
 
 func (x *GetClubResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[1]
+	mi := &file_club_v1_club_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -99,7 +99,7 @@ func (x *GetClubResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetClubResponse.ProtoReflect.Descriptor instead.
 func (*GetClubResponse) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{1}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *GetClubResponse) GetCredits() int64 {
@@ -120,7 +120,7 @@ type LockCardRequest struct {
 
 func (x *LockCardRequest) Reset() {
 	*x = LockCardRequest{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[2]
+	mi := &file_club_v1_club_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -132,7 +132,7 @@ func (x *LockCardRequest) String() string {
 func (*LockCardRequest) ProtoMessage() {}
 
 func (x *LockCardRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[2]
+	mi := &file_club_v1_club_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -145,7 +145,7 @@ func (x *LockCardRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LockCardRequest.ProtoReflect.Descriptor instead.
 func (*LockCardRequest) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{2}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *LockCardRequest) GetUserId() string {
@@ -178,7 +178,7 @@ type LockCardResponse struct {
 
 func (x *LockCardResponse) Reset() {
 	*x = LockCardResponse{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[3]
+	mi := &file_club_v1_club_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -190,7 +190,7 @@ func (x *LockCardResponse) String() string {
 func (*LockCardResponse) ProtoMessage() {}
 
 func (x *LockCardResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[3]
+	mi := &file_club_v1_club_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -203,7 +203,7 @@ func (x *LockCardResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LockCardResponse.ProtoReflect.Descriptor instead.
 func (*LockCardResponse) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{3}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *LockCardResponse) GetLockId() string {
@@ -222,7 +222,7 @@ type ReleaseCardLockRequest struct {
 
 func (x *ReleaseCardLockRequest) Reset() {
 	*x = ReleaseCardLockRequest{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[4]
+	mi := &file_club_v1_club_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -234,7 +234,7 @@ func (x *ReleaseCardLockRequest) String() string {
 func (*ReleaseCardLockRequest) ProtoMessage() {}
 
 func (x *ReleaseCardLockRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[4]
+	mi := &file_club_v1_club_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -247,7 +247,7 @@ func (x *ReleaseCardLockRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReleaseCardLockRequest.ProtoReflect.Descriptor instead.
 func (*ReleaseCardLockRequest) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{4}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *ReleaseCardLockRequest) GetLockId() string {
@@ -266,7 +266,7 @@ type ReleaseCardLockResponse struct {
 
 func (x *ReleaseCardLockResponse) Reset() {
 	*x = ReleaseCardLockResponse{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[5]
+	mi := &file_club_v1_club_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -278,7 +278,7 @@ func (x *ReleaseCardLockResponse) String() string {
 func (*ReleaseCardLockResponse) ProtoMessage() {}
 
 func (x *ReleaseCardLockResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[5]
+	mi := &file_club_v1_club_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -291,7 +291,7 @@ func (x *ReleaseCardLockResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReleaseCardLockResponse.ProtoReflect.Descriptor instead.
 func (*ReleaseCardLockResponse) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{5}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *ReleaseCardLockResponse) GetReleased() bool {
@@ -312,7 +312,7 @@ type CreateCreditHoldRequest struct {
 
 func (x *CreateCreditHoldRequest) Reset() {
 	*x = CreateCreditHoldRequest{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[6]
+	mi := &file_club_v1_club_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -324,7 +324,7 @@ func (x *CreateCreditHoldRequest) String() string {
 func (*CreateCreditHoldRequest) ProtoMessage() {}
 
 func (x *CreateCreditHoldRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[6]
+	mi := &file_club_v1_club_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -337,7 +337,7 @@ func (x *CreateCreditHoldRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateCreditHoldRequest.ProtoReflect.Descriptor instead.
 func (*CreateCreditHoldRequest) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{6}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *CreateCreditHoldRequest) GetUserId() string {
@@ -370,7 +370,7 @@ type CreateCreditHoldResponse struct {
 
 func (x *CreateCreditHoldResponse) Reset() {
 	*x = CreateCreditHoldResponse{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[7]
+	mi := &file_club_v1_club_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -382,7 +382,7 @@ func (x *CreateCreditHoldResponse) String() string {
 func (*CreateCreditHoldResponse) ProtoMessage() {}
 
 func (x *CreateCreditHoldResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[7]
+	mi := &file_club_v1_club_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -395,7 +395,7 @@ func (x *CreateCreditHoldResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CreateCreditHoldResponse.ProtoReflect.Descriptor instead.
 func (*CreateCreditHoldResponse) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{7}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *CreateCreditHoldResponse) GetHoldId() string {
@@ -414,7 +414,7 @@ type ReleaseCreditHoldRequest struct {
 
 func (x *ReleaseCreditHoldRequest) Reset() {
 	*x = ReleaseCreditHoldRequest{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[8]
+	mi := &file_club_v1_club_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -426,7 +426,7 @@ func (x *ReleaseCreditHoldRequest) String() string {
 func (*ReleaseCreditHoldRequest) ProtoMessage() {}
 
 func (x *ReleaseCreditHoldRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[8]
+	mi := &file_club_v1_club_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -439,7 +439,7 @@ func (x *ReleaseCreditHoldRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReleaseCreditHoldRequest.ProtoReflect.Descriptor instead.
 func (*ReleaseCreditHoldRequest) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{8}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *ReleaseCreditHoldRequest) GetHoldId() string {
@@ -458,7 +458,7 @@ type ReleaseCreditHoldResponse struct {
 
 func (x *ReleaseCreditHoldResponse) Reset() {
 	*x = ReleaseCreditHoldResponse{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[9]
+	mi := &file_club_v1_club_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -470,7 +470,7 @@ func (x *ReleaseCreditHoldResponse) String() string {
 func (*ReleaseCreditHoldResponse) ProtoMessage() {}
 
 func (x *ReleaseCreditHoldResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[9]
+	mi := &file_club_v1_club_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -483,7 +483,7 @@ func (x *ReleaseCreditHoldResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ReleaseCreditHoldResponse.ProtoReflect.Descriptor instead.
 func (*ReleaseCreditHoldResponse) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{9}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *ReleaseCreditHoldResponse) GetReleased() bool {
@@ -505,7 +505,7 @@ type SettleTradeRequest struct {
 
 func (x *SettleTradeRequest) Reset() {
 	*x = SettleTradeRequest{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[10]
+	mi := &file_club_v1_club_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -517,7 +517,7 @@ func (x *SettleTradeRequest) String() string {
 func (*SettleTradeRequest) ProtoMessage() {}
 
 func (x *SettleTradeRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[10]
+	mi := &file_club_v1_club_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -530,7 +530,7 @@ func (x *SettleTradeRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SettleTradeRequest.ProtoReflect.Descriptor instead.
 func (*SettleTradeRequest) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{10}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *SettleTradeRequest) GetSellerUserId() string {
@@ -570,7 +570,7 @@ type SettleTradeResponse struct {
 
 func (x *SettleTradeResponse) Reset() {
 	*x = SettleTradeResponse{}
-	mi := &file_proto_club_v1_club_proto_msgTypes[11]
+	mi := &file_club_v1_club_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -582,7 +582,7 @@ func (x *SettleTradeResponse) String() string {
 func (*SettleTradeResponse) ProtoMessage() {}
 
 func (x *SettleTradeResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_club_v1_club_proto_msgTypes[11]
+	mi := &file_club_v1_club_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -595,7 +595,7 @@ func (x *SettleTradeResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SettleTradeResponse.ProtoReflect.Descriptor instead.
 func (*SettleTradeResponse) Descriptor() ([]byte, []int) {
-	return file_proto_club_v1_club_proto_rawDescGZIP(), []int{11}
+	return file_club_v1_club_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *SettleTradeResponse) GetSettled() bool {
@@ -605,11 +605,11 @@ func (x *SettleTradeResponse) GetSettled() bool {
 	return false
 }
 
-var File_proto_club_v1_club_proto protoreflect.FileDescriptor
+var File_club_v1_club_proto protoreflect.FileDescriptor
 
-const file_proto_club_v1_club_proto_rawDesc = "" +
+const file_club_v1_club_proto_rawDesc = "" +
 	"\n" +
-	"\x18proto/club/v1/club.proto\x12\aclub.v1\")\n" +
+	"\x12club/v1/club.proto\x12\aclub.v1\")\n" +
 	"\x0eGetClubRequest\x12\x17\n" +
 	"\auser_id\x18\x01 \x01(\tR\x06userId\"+\n" +
 	"\x0fGetClubResponse\x12\x18\n" +
@@ -649,23 +649,23 @@ const file_proto_club_v1_club_proto_rawDesc = "" +
 	"\x0fReleaseCardLock\x12\x1f.club.v1.ReleaseCardLockRequest\x1a .club.v1.ReleaseCardLockResponse\x12W\n" +
 	"\x10CreateCreditHold\x12 .club.v1.CreateCreditHoldRequest\x1a!.club.v1.CreateCreditHoldResponse\x12Z\n" +
 	"\x11ReleaseCreditHold\x12!.club.v1.ReleaseCreditHoldRequest\x1a\".club.v1.ReleaseCreditHoldResponse\x12H\n" +
-	"\vSettleTrade\x12\x1b.club.v1.SettleTradeRequest\x1a\x1c.club.v1.SettleTradeResponseB\x7f\n" +
-	"\vcom.club.v1B\tClubProtoP\x01Z(UltimateTeamX/proto/proto/club/v1;clubv1\xa2\x02\x03CXX\xaa\x02\aClub.V1\xca\x02\aClub\\V1\xe2\x02\x13Club\\V1\\GPBMetadata\xea\x02\bClub::V1b\x06proto3"
+	"\vSettleTrade\x12\x1b.club.v1.SettleTradeRequest\x1a\x1c.club.v1.SettleTradeResponseBy\n" +
+	"\vcom.club.v1B\tClubProtoP\x01Z\"UltimateTeamX/proto/club/v1;clubv1\xa2\x02\x03CXX\xaa\x02\aClub.V1\xca\x02\aClub\\V1\xe2\x02\x13Club\\V1\\GPBMetadata\xea\x02\bClub::V1b\x06proto3"
 
 var (
-	file_proto_club_v1_club_proto_rawDescOnce sync.Once
-	file_proto_club_v1_club_proto_rawDescData []byte
+	file_club_v1_club_proto_rawDescOnce sync.Once
+	file_club_v1_club_proto_rawDescData []byte
 )
 
-func file_proto_club_v1_club_proto_rawDescGZIP() []byte {
-	file_proto_club_v1_club_proto_rawDescOnce.Do(func() {
-		file_proto_club_v1_club_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_club_v1_club_proto_rawDesc), len(file_proto_club_v1_club_proto_rawDesc)))
+func file_club_v1_club_proto_rawDescGZIP() []byte {
+	file_club_v1_club_proto_rawDescOnce.Do(func() {
+		file_club_v1_club_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_club_v1_club_proto_rawDesc), len(file_club_v1_club_proto_rawDesc)))
 	})
-	return file_proto_club_v1_club_proto_rawDescData
+	return file_club_v1_club_proto_rawDescData
 }
 
-var file_proto_club_v1_club_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
-var file_proto_club_v1_club_proto_goTypes = []any{
+var file_club_v1_club_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
+var file_club_v1_club_proto_goTypes = []any{
 	(*GetClubRequest)(nil),            // 0: club.v1.GetClubRequest
 	(*GetClubResponse)(nil),           // 1: club.v1.GetClubResponse
 	(*LockCardRequest)(nil),           // 2: club.v1.LockCardRequest
@@ -679,7 +679,7 @@ var file_proto_club_v1_club_proto_goTypes = []any{
 	(*SettleTradeRequest)(nil),        // 10: club.v1.SettleTradeRequest
 	(*SettleTradeResponse)(nil),       // 11: club.v1.SettleTradeResponse
 }
-var file_proto_club_v1_club_proto_depIdxs = []int32{
+var file_club_v1_club_proto_depIdxs = []int32{
 	0,  // 0: club.v1.ClubService.GetClub:input_type -> club.v1.GetClubRequest
 	2,  // 1: club.v1.ClubService.LockCard:input_type -> club.v1.LockCardRequest
 	4,  // 2: club.v1.ClubService.ReleaseCardLock:input_type -> club.v1.ReleaseCardLockRequest
@@ -699,26 +699,26 @@ var file_proto_club_v1_club_proto_depIdxs = []int32{
 	0,  // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_proto_club_v1_club_proto_init() }
-func file_proto_club_v1_club_proto_init() {
-	if File_proto_club_v1_club_proto != nil {
+func init() { file_club_v1_club_proto_init() }
+func file_club_v1_club_proto_init() {
+	if File_club_v1_club_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_club_v1_club_proto_rawDesc), len(file_proto_club_v1_club_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_club_v1_club_proto_rawDesc), len(file_club_v1_club_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   12,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_proto_club_v1_club_proto_goTypes,
-		DependencyIndexes: file_proto_club_v1_club_proto_depIdxs,
-		MessageInfos:      file_proto_club_v1_club_proto_msgTypes,
+		GoTypes:           file_club_v1_club_proto_goTypes,
+		DependencyIndexes: file_club_v1_club_proto_depIdxs,
+		MessageInfos:      file_club_v1_club_proto_msgTypes,
 	}.Build()
-	File_proto_club_v1_club_proto = out.File
-	file_proto_club_v1_club_proto_goTypes = nil
-	file_proto_club_v1_club_proto_depIdxs = nil
+	File_club_v1_club_proto = out.File
+	file_club_v1_club_proto_goTypes = nil
+	file_club_v1_club_proto_depIdxs = nil
 }

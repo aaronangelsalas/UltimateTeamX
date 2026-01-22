@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        (unknown)
-// source: proto/common/v1/common.proto
+// source: common/v1/common.proto
 
 package commonv1
 
@@ -54,11 +54,11 @@ func (x SortOrder) String() string {
 }
 
 func (SortOrder) Descriptor() protoreflect.EnumDescriptor {
-	return file_proto_common_v1_common_proto_enumTypes[0].Descriptor()
+	return file_common_v1_common_proto_enumTypes[0].Descriptor()
 }
 
 func (SortOrder) Type() protoreflect.EnumType {
-	return &file_proto_common_v1_common_proto_enumTypes[0]
+	return &file_common_v1_common_proto_enumTypes[0]
 }
 
 func (x SortOrder) Number() protoreflect.EnumNumber {
@@ -67,7 +67,7 @@ func (x SortOrder) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use SortOrder.Descriptor instead.
 func (SortOrder) EnumDescriptor() ([]byte, []int) {
-	return file_proto_common_v1_common_proto_rawDescGZIP(), []int{0}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{0}
 }
 
 type Pagination struct {
@@ -80,7 +80,7 @@ type Pagination struct {
 
 func (x *Pagination) Reset() {
 	*x = Pagination{}
-	mi := &file_proto_common_v1_common_proto_msgTypes[0]
+	mi := &file_common_v1_common_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -92,7 +92,7 @@ func (x *Pagination) String() string {
 func (*Pagination) ProtoMessage() {}
 
 func (x *Pagination) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_common_v1_common_proto_msgTypes[0]
+	mi := &file_common_v1_common_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -105,7 +105,7 @@ func (x *Pagination) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Pagination.ProtoReflect.Descriptor instead.
 func (*Pagination) Descriptor() ([]byte, []int) {
-	return file_proto_common_v1_common_proto_rawDescGZIP(), []int{0}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Pagination) GetPage() uint32 {
@@ -132,7 +132,7 @@ type Sort struct {
 
 func (x *Sort) Reset() {
 	*x = Sort{}
-	mi := &file_proto_common_v1_common_proto_msgTypes[1]
+	mi := &file_common_v1_common_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -144,7 +144,7 @@ func (x *Sort) String() string {
 func (*Sort) ProtoMessage() {}
 
 func (x *Sort) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_common_v1_common_proto_msgTypes[1]
+	mi := &file_common_v1_common_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -157,7 +157,7 @@ func (x *Sort) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Sort.ProtoReflect.Descriptor instead.
 func (*Sort) Descriptor() ([]byte, []int) {
-	return file_proto_common_v1_common_proto_rawDescGZIP(), []int{1}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Sort) GetField() string {
@@ -184,7 +184,7 @@ type Error struct {
 
 func (x *Error) Reset() {
 	*x = Error{}
-	mi := &file_proto_common_v1_common_proto_msgTypes[2]
+	mi := &file_common_v1_common_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -196,7 +196,7 @@ func (x *Error) String() string {
 func (*Error) ProtoMessage() {}
 
 func (x *Error) ProtoReflect() protoreflect.Message {
-	mi := &file_proto_common_v1_common_proto_msgTypes[2]
+	mi := &file_common_v1_common_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -209,7 +209,7 @@ func (x *Error) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Error.ProtoReflect.Descriptor instead.
 func (*Error) Descriptor() ([]byte, []int) {
-	return file_proto_common_v1_common_proto_rawDescGZIP(), []int{2}
+	return file_common_v1_common_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Error) GetCode() string {
@@ -226,11 +226,11 @@ func (x *Error) GetMessage() string {
 	return ""
 }
 
-var File_proto_common_v1_common_proto protoreflect.FileDescriptor
+var File_common_v1_common_proto protoreflect.FileDescriptor
 
-const file_proto_common_v1_common_proto_rawDesc = "" +
+const file_common_v1_common_proto_rawDesc = "" +
 	"\n" +
-	"\x1cproto/common/v1/common.proto\x12\tcommon.v1\"=\n" +
+	"\x16common/v1/common.proto\x12\tcommon.v1\"=\n" +
 	"\n" +
 	"Pagination\x12\x12\n" +
 	"\x04page\x18\x01 \x01(\rR\x04page\x12\x1b\n" +
@@ -244,31 +244,31 @@ const file_proto_common_v1_common_proto_rawDesc = "" +
 	"\tSortOrder\x12\x1a\n" +
 	"\x16SORT_ORDER_UNSPECIFIED\x10\x00\x12\x12\n" +
 	"\x0eSORT_ORDER_ASC\x10\x01\x12\x13\n" +
-	"\x0fSORT_ORDER_DESC\x10\x02B\x8f\x01\n" +
-	"\rcom.common.v1B\vCommonProtoP\x01Z,UltimateTeamX/proto/proto/common/v1;commonv1\xa2\x02\x03CXX\xaa\x02\tCommon.V1\xca\x02\tCommon\\V1\xe2\x02\x15Common\\V1\\GPBMetadata\xea\x02\n" +
+	"\x0fSORT_ORDER_DESC\x10\x02B\x89\x01\n" +
+	"\rcom.common.v1B\vCommonProtoP\x01Z&UltimateTeamX/proto/common/v1;commonv1\xa2\x02\x03CXX\xaa\x02\tCommon.V1\xca\x02\tCommon\\V1\xe2\x02\x15Common\\V1\\GPBMetadata\xea\x02\n" +
 	"Common::V1b\x06proto3"
 
 var (
-	file_proto_common_v1_common_proto_rawDescOnce sync.Once
-	file_proto_common_v1_common_proto_rawDescData []byte
+	file_common_v1_common_proto_rawDescOnce sync.Once
+	file_common_v1_common_proto_rawDescData []byte
 )
 
-func file_proto_common_v1_common_proto_rawDescGZIP() []byte {
-	file_proto_common_v1_common_proto_rawDescOnce.Do(func() {
-		file_proto_common_v1_common_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_proto_common_v1_common_proto_rawDesc), len(file_proto_common_v1_common_proto_rawDesc)))
+func file_common_v1_common_proto_rawDescGZIP() []byte {
+	file_common_v1_common_proto_rawDescOnce.Do(func() {
+		file_common_v1_common_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_common_v1_common_proto_rawDesc), len(file_common_v1_common_proto_rawDesc)))
 	})
-	return file_proto_common_v1_common_proto_rawDescData
+	return file_common_v1_common_proto_rawDescData
 }
 
-var file_proto_common_v1_common_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_proto_common_v1_common_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-var file_proto_common_v1_common_proto_goTypes = []any{
+var file_common_v1_common_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_common_v1_common_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_common_v1_common_proto_goTypes = []any{
 	(SortOrder)(0),     // 0: common.v1.SortOrder
 	(*Pagination)(nil), // 1: common.v1.Pagination
 	(*Sort)(nil),       // 2: common.v1.Sort
 	(*Error)(nil),      // 3: common.v1.Error
 }
-var file_proto_common_v1_common_proto_depIdxs = []int32{
+var file_common_v1_common_proto_depIdxs = []int32{
 	0, // 0: common.v1.Sort.order:type_name -> common.v1.SortOrder
 	1, // [1:1] is the sub-list for method output_type
 	1, // [1:1] is the sub-list for method input_type
@@ -277,27 +277,27 @@ var file_proto_common_v1_common_proto_depIdxs = []int32{
 	0, // [0:1] is the sub-list for field type_name
 }
 
-func init() { file_proto_common_v1_common_proto_init() }
-func file_proto_common_v1_common_proto_init() {
-	if File_proto_common_v1_common_proto != nil {
+func init() { file_common_v1_common_proto_init() }
+func file_common_v1_common_proto_init() {
+	if File_common_v1_common_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_proto_common_v1_common_proto_rawDesc), len(file_proto_common_v1_common_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_common_v1_common_proto_rawDesc), len(file_common_v1_common_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_proto_common_v1_common_proto_goTypes,
-		DependencyIndexes: file_proto_common_v1_common_proto_depIdxs,
-		EnumInfos:         file_proto_common_v1_common_proto_enumTypes,
-		MessageInfos:      file_proto_common_v1_common_proto_msgTypes,
+		GoTypes:           file_common_v1_common_proto_goTypes,
+		DependencyIndexes: file_common_v1_common_proto_depIdxs,
+		EnumInfos:         file_common_v1_common_proto_enumTypes,
+		MessageInfos:      file_common_v1_common_proto_msgTypes,
 	}.Build()
-	File_proto_common_v1_common_proto = out.File
-	file_proto_common_v1_common_proto_goTypes = nil
-	file_proto_common_v1_common_proto_depIdxs = nil
+	File_common_v1_common_proto = out.File
+	file_common_v1_common_proto_goTypes = nil
+	file_common_v1_common_proto_depIdxs = nil
 }
