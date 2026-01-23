@@ -44,6 +44,7 @@ Configurazione
 - Le variabili vengono caricate da `.env` (sovrascrivono quelle gia' presenti) usando `GO_DOTENV_PATH` se valorizzato.
 
 Esempi pratici (senza codice complesso)
+- Nota: comandi pensati per ambienti di sviluppo locale.
 - Creare un listing = "mettere una carta in vendita".
   - Risultato: il marketplace crea un annuncio con prezzo di partenza e scadenza.
   - Comando (da terminale):

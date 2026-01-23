@@ -47,6 +47,7 @@ func main() {
 	logger := slog.New(slog.NewTextHandler(os.Stdout, nil))
 	addr := os.Getenv("GRPC_ADDR")
 	if addr == "" {
+		// Default porta mock compatibile con club-svc.
 		addr = ":50052"
 	}
 
